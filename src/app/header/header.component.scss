@@ -56,19 +56,3 @@
 }
 
 }
-
-/* Transform the 1st and 3rd slice into a cross - the 2nd will be invisible */
-
-#menuToggle input:checked ~ span {
-	transform: rotate(45deg) translate(-2px, -1px);
-	background: #fff;
-}
-
-#menuToggle input:checked ~ span:nth-last-child(3) {
-	opacity: 0;
-	transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-#menuToggle input:checked ~ span:nth-last-child(2) {
-	transform: rotate(-45deg) translate(0, -1px);
-}

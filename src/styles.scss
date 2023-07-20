@@ -1,3 +1,10 @@
+:root {
+	--colorBlue: #2a324b;
+	--colorYellow: #f4d35e;
+	--colorCyan: #6ecccc;
+	--colorBeige: #fffcf3
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -9,11 +16,15 @@ html {
 }
 
 body {
-	background-color: #fffcf3;
+	background-color: var(--colorBeige);
 	padding: 0 150px;
+	color: var(--colorBlue);
 }
 
 img {
 	width: 100%;
 	height: auto;
 }
+
+
+

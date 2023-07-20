@@ -1,13 +1,13 @@
 <div class="teaserWrapper">
 	<div class="teaserTextContainer">
 		<h1>Frontend<br>Developer</h1>
-		<div></div>
-		<h2>Martin Buder</h2>
+		<div class="subHeader">
+			<div class="line"></div>
+			<h2>Martin Buder</h2>
+		</div>
 	</div>
-	<div class="subline">
-		<h3>The web is your stage.</h3>
-		<h3>Code is your brush.</h3>
-		<h3>Design your stage!</h3>
+	<div class="sublineContainer">
+		<p *ngIf="showSubline" class="subline">{{subline[currentSub]}}</p>
 	</div>
 
 	<a href="mailto:martin.buder@designyourstage.com" class="teaserMail">martin.buder@designyourstage.com</a>

@@ -1,10 +1,40 @@
+
 .teaserWrapper {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 	width: 100%;
 	height: 100vh;
 	position: relative;
+
+	.teaserTextContainer {
+
+			h1 {
+				width: 100%;
+				text-align: center;
+				font-size: 12rem;
+			}
+
+			.subHeader {
+				display: flex;
+				align-items: center;
+				padding: 0 30px;
+				gap: 20px;
+			}
+
+			h2 {
+				font-size: 2.5rem;
+				color: var(--colorCyan);
+			}
+
+			.line {
+				background-color: var(--colorBlue);
+				height: 4px;
+				flex: 1;
+			}
+
+	}
 
 	.teaserMail, .scrollDownContainer {
 		display: block;
@@ -17,12 +47,40 @@
 		left: 0;
 		transform-origin: 0;
 		transform: rotate(-90deg);
+		color: var(--colorBlue);
+		text-decoration: none;
+		font-size: 1.5rem;
+		font-weight: 500;
+
+			&:hover {
+				color: var(--colorCyan);
+			}
+	}
+
+	.sublineContainer {
+		height: 50px;
+	}
+
+	.subline {
+		font-size: 4rem;
+		animation: flyIn 5s ease;
+		margin-top: 50px;
+	}
+}
+
+@keyframes flyIn {
+		from {
+			transform: scale(0.2);
+		}
+
+		to {
+			transform: scale(1);
+		}
 	}
 
 	.scrollDownContainer {
 		right: 0;
 		height: 150px;
-		
 	}
 
 	.downArrow {
@@ -45,4 +103,5 @@
 			transform: translateY(100px);
 		}
 	}
-}
+
+
