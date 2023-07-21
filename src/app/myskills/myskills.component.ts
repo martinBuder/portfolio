@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-myskills',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./myskills.component.scss']
 })
 export class MyskillsComponent {
-
+  @Input() skills = [
+    'angular', 'typescript', 'javascript', 'html', 'css', 'firebase', 'git', 'scrum', 'api', 'materialdesign',
+  ]
 }

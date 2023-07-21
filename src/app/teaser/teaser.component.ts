@@ -27,6 +27,6 @@ export class TeaserComponent implements OnInit {
         setTimeout(() => {
           this.showSubline = true;
         }, 10);
-      }, 5000)
+      }, 6000)
     }
 }

@@ -10,12 +10,6 @@
 
 .logo {
 	width: 70px;
-	filter: grayscale(0.9);
-	cursor: pointer;
-
-	&:hover{
-		filter: grayscale(0);
-	}
 }
 
 #menuToggle {
