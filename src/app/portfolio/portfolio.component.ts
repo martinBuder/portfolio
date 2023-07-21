@@ -8,12 +8,12 @@ import { Component } from '@angular/core';
 export class PortfolioComponent {
   projects = [
     {
-      'img': 'sharkiegame',
-      'weblink': '',
-      'title': 'Sharkie',
-      'description': 'string',
-      'codeElements': 'string',
-      'githubLink': 'string',
-    }
+      img: 'sharkiegame',
+      weblink: '',
+      title: 'Sharkie',
+      description: 'string',
+      codeElements: 'string',
+      githubLink: 'string',
+    },
   ]
 }

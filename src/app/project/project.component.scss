@@ -1,4 +1,11 @@
-iframe {
+.projectImg {
 	width: 50%;
-	height: 480px;
+}
+
+.projectDescription {
+	flex: 1;
+
+	a {
+		text-decoration: none;
+	}
 }
