@@ -15,5 +15,13 @@ export class PortfolioComponent {
       codeElements: 'string',
       githubLink: 'string',
     },
+    {
+      img: 'sharkiegame',
+      weblink: '',
+      title: 'Sharkie',
+      description: 'string',
+      codeElements: 'string',
+      githubLink: 'string',
+    },
   ]
 }

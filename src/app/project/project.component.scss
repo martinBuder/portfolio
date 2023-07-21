@@ -9,3 +9,29 @@
 		text-decoration: none;
 	}
 }
+
+.imgBorder {
+	position: absolute;
+	top: 20px;
+	bottom: -20px;
+	left: 20px;
+	right: -20px;
+	border: 4px solid var(--colorHighlight);
+	z-index: 1;
+	opacity: 0;
+}
+
+:host-context(app-project:nth-child(2n)) .imgBorder {
+	left: -20px;
+	right: 20px;
+}
+
+
+:host-context(app-project:hover) .imgBorder, :host-context(app-project:hover) .imgHover {
+	opacity: 1;
+	filter: grayscale(0);
+}
+
+
+
+

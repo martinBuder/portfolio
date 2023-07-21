@@ -76,9 +76,13 @@ img {
 .imgHover {
 	filter: grayscale(0.9);
 	cursor: pointer;
+	transition: all 128ms ease-in-out;
+
 
 	&:hover{
 		filter: grayscale(0);
+		transition: all 128ms ease-in-out;
+
 	}
 }
 
