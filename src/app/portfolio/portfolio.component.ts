@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent {
-
+  projects = [
+    {
+      'img': 'sharkiegame',
+      'weblink': '',
+      'title': 'Sharkie',
+      'description': 'string',
+      'codeElements': 'string',
+      'githubLink': 'string',
+    }
+  ]
 }

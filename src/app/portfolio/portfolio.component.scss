@@ -1,0 +1,22 @@
+.portfolioWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	p {
+		width: 350px;
+		margin: 20px;
+	}
+}
+
+.projects {
+	width: 100%;
+}
+
+app-project {
+	display: flex;
+}
+
+app-project:nth-child(2n) {
+	flex-direction: column-reverse;
+}
