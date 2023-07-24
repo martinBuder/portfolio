@@ -10,4 +10,6 @@ import { Project } from '../interfaces/project';
 })
 export class ProjectComponent {
   @Input() project !: Project;
+  @Input() i !: number;
+  @Input() projectsAmount !: number
 }

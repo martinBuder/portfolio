@@ -1,0 +1,63 @@
+
+.triangleContainer {
+	width: 0;
+	height: 0;
+	border-left: 0px solid transparent;
+	border-right: calc(100vw - 10px) solid transparent; //10px ist scroll width
+	border-bottom: 200px solid var(--colorDark);
+	margin-left: calc(var(--bodyPadding) * -1);
+}
+
+.contactContainer {
+	background-color: var(--colorDark);
+	width: calc(100% + var(--bodyPadding) + var(--bodyPadding));
+	margin-left: calc(var(--bodyPadding) * -1);
+	color: var(--colorLight);
+	padding: 50px var(--bodyPadding);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 50px;
+}
+
+h2 {
+	width: 100%;
+	text-align: left;
+}
+
+h3 {
+	color: var(--colorHighlight);
+	font-size: 1.6rem;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	gap: 50px;
+
+	input, textarea {
+		background-color: var(--colorDark);
+		border-style: none;
+		border-bottom: 2px solid var(--colorLight);
+		padding: 10px;
+		outline: none;
+		color: var(--colorLight);
+		font-size: 1.2rem;
+
+
+		&::placeholder {
+			color: var(--colorLight);
+			font-size: 1.2rem;
+		}
+	}
+}
+
+button {
+	color: var(--colorLight);
+	width: min-content;
+	white-space: nowrap;
+	border-color: var(--colorLight);
+	align-self: center;
+}
+

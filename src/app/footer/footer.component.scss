@@ -1,0 +1,38 @@
+footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	background-color: var(--colorDark);
+	width: calc(100% + var(--bodyPadding) + var(--bodyPadding));
+	margin-left: calc(var(--bodyPadding) * -1);
+	color: var(--colorLight);
+	padding: 50px var(--bodyPadding);
+}
+
+a {
+	display: block;
+	color: var(--colorLight);
+	text-decoration: none;
+}
+
+.logo {
+	width: 70px;
+	margin-bottom: 10px;
+}
+
+.socialImgWrapper {
+	display: flex;
+	justify-content: space-between;
+	gap: 50px;
+	margin-bottom: 10px;
+
+	a {
+		width: 30px;
+		display: flex;
+		align-items: flex-end;
+	}
+}
+
+.bsideFooter a {
+	text-align: right;
+}

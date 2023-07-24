@@ -17,6 +17,7 @@ app-project {
 	display: flex;
 	gap: 100px;
 	margin-top: 70px;
+	position: relative;
 
 	&:hover {
 		.imgBorder {

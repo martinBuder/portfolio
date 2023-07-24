@@ -1,8 +1,21 @@
+ @font-face {
+		font-family: 'Source Code Pro';
+		src: url(assets/font/SourceCodePro-Medium.ttf);
+	}
+
+	@font-face {
+		font-family: 'Heebo';
+		src: url(assets/font/Heebo-VariableFont_wght.ttf);
+	}
+
 :root {
 	--colorDark: #2a324b;
 	--colorNuance: #f4d35e;
 	--colorHighlight: #6ecccc;
-	--colorLight: #fffcf3
+	--colorLight: #fffcf3;
+	--bodyPadding: 150px;
+	--fontSourceCode: 'Source Code Pro', monospace;
+	--fontHeebo: 'Heebo', sans-serif;
 }
 
 * {
@@ -13,7 +26,7 @@
 
 /* ! Scrollbar */
 ::-webkit-scrollbar-button {
-	height: 20px;
+	height: 5px;
 }
 
 ::-webkit-scrollbar {
@@ -34,12 +47,29 @@ html {
 
 body {
 	background-color: var(--colorLight);
-	padding: 0 150px;
+	padding: 0 var(--bodyPadding);
 	color: var(--colorDark);
+	font-family: var(--fontHeebo);
+}
+
+h1, h2 h4, h4 {
+	font-family: var(--fontSourceCode);
 }
 
 h2 {
 	font-size: 6rem;
+
+	&:hover {
+		color: var(--colorHighlight);
+	}
+}
+
+h3 {
+	font-size: 3.5rem;
+}
+
+h4 {
+	font-size: 1.4rem;
 }
 
 p {
@@ -50,6 +80,7 @@ button {
 	font-size: 1.2rem;
 	padding: 10px 30px;
 	border: 4px solid var(--colorDark);
+	color: var(--colorDark);
 	background: none;
 	cursor: pointer;
 	transition: all 128ms ease-in-out;
