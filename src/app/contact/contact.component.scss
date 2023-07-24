@@ -40,18 +40,28 @@ form {
 		background-color: var(--colorDark);
 		border-style: none;
 		border-bottom: 2px solid var(--colorLight);
+		border-top: 2px solid transparent;
+		border-left: 2px solid transparent;
+		border-right: 2px solid transparent;
 		padding: 10px;
 		outline: none;
 		color: var(--colorLight);
 		font-size: 1.2rem;
 		font-family: var(--fontText);
 
+		&:hover {
+			border: 2px solid var(--colorLight);
+		}
 
 		&::placeholder {
 			color: var(--colorLight);
 			font-size: 1.2rem;
 		}
 	}
+}
+
+textarea {
+	height: 20vh;
 }
 
 button {
