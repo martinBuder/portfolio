@@ -14,8 +14,8 @@
 	--colorHighlight: #6ecccc;
 	--colorLight: #fffcf3;
 	--bodyPadding: 150px;
-	--fontSourceCode: 'Source Code Pro', monospace;
-	--fontHeebo: 'Heebo', sans-serif;
+	--fontHeader: 'Source Code Pro', monospace;
+	--fontText: 'Heebo', sans-serif;
 }
 
 * {
@@ -49,11 +49,11 @@ body {
 	background-color: var(--colorLight);
 	padding: 0 var(--bodyPadding);
 	color: var(--colorDark);
-	font-family: var(--fontHeebo);
+	font-family: var(--fontText);
 }
 
-h1, h2 h4, h4 {
-	font-family: var(--fontSourceCode);
+h1, h2, h3, h4 {
+	font-family: var(--fontHeader);
 }
 
 h2 {
@@ -78,6 +78,7 @@ p {
 
 button {
 	font-size: 1.2rem;
+	font-family: var(--fontHeader);
 	padding: 10px 30px;
 	border: 4px solid var(--colorDark);
 	color: var(--colorDark);
