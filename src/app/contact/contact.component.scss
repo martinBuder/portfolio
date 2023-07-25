@@ -29,7 +29,7 @@ h2 {
 	text-align: left;
 }
 
-h3 {
+h4 {
 	color: var(--colorHighlight);
 }
 
@@ -41,6 +41,7 @@ form {
 	margin-top: 50px;
 
 	input, textarea {
+		width: 100%;
 		background-color: var(--colorDark);
 		border-style: none;
 		border-bottom: 2px solid var(--colorLight);
@@ -53,15 +54,41 @@ form {
 		font-size: 1.2rem;
 		font-family: var(--fontText);
 
-		&:hover {
+		&:hover, &:focus {
 			border: 2px solid var(--colorLight);
 		}
 
-		&::placeholder {
-			color: var(--colorLight);
-			font-size: 1.2rem;
+				&:focus {
+					&::placeholder {
+						color: transparent;
+					}
+				}
+
+				&::placeholder {
+					color: var(--colorLight);
+					font-size: 1.2rem;
+				}
+	}
+
+		
+	}
+
+	.fieldWrapper {
+		position: relative;
+		width: 100%;
+
+		div {
+			display: none;
+			position: absolute;
+			top: -10px;
+			background: var(--colorDark);
+			padding: 0 10px;
+			margin-left: 10px;
 		}
 	}
+
+.fieldWrapper:focus-within div {
+ display: block;
 }
 
 textarea {

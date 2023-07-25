@@ -4,10 +4,18 @@
 	<h4>Want to discuss a new project?</h4>
 	<p>Say hello! Let's discuss your ideas and make it happen.</p>
 	<form action="" method="post" (submit)="send()">
-		<input type="name" placeholder="Your name" required>
-		<input type="email" placeholder="Your email" required>
-		<textarea type="text" placeholder="Your message" required></textarea>
-
+		<div class="fieldWrapper">
+			<div>Your name</div>
+			<input type="name" placeholder="Your name" required>
+		</div>
+		<div class="fieldWrapper">
+			<div>Your email</div>
+			<input type="email" placeholder="Your email" required>
+		</div>
+		<div class="fieldWrapper">
+			<div>Your message</div>
+			<textarea type="text" placeholder="Your message" required></textarea>
+		</div>
 		<button class="btnHover">
 			Send message
 		</button>
