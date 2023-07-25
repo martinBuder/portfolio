@@ -8,12 +8,19 @@
 	flex-direction: column;
 	justify-content: center;
 	margin-top: 20px;
-	gap: 10px;
 
 	a {
 		text-decoration: none;
 		margin-top: 10px;
 	}
+}
+
+.projectArea {
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	gap: 10px;
+	height: 100%;
 }
 
 .imgBorder {
@@ -24,7 +31,7 @@
 	right: -20px;
 	border: 4px solid var(--colorDark);
 	z-index: 1;
-	opacity: 0;
+	display: none;
 
 		img {
 			width: 5vw;
@@ -72,9 +79,27 @@
 		}
 }
 
+:host-context(app-project:hover) .projectArea {
+	display: flex;
+	opacity: 0;
+	transform: translateX(-100%);
+	animation: projectSlide 300ms ease-in-out forwards;
+}
+
+:host-context(app-project:nth-child(2n):hover) .projectArea {
+	transform: translateX(100%);
+}
+
+
+@keyframes projectSlide {
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
 
 :host-context(app-project:hover) .imgBorder, :host-context(app-project:hover) .imgHover {
-	opacity: 1;
+	display: block;
 	filter: grayscale(0);
 }
 

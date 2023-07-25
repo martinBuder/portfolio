@@ -18,6 +18,10 @@
 	flex-direction: column;
 	align-items: center;
 	gap: 50px;
+
+	p {
+		font-family: var(--fontHeader);
+	}
 }
 
 h2 {
@@ -27,7 +31,6 @@ h2 {
 
 h3 {
 	color: var(--colorHighlight);
-	font-size: 1.6rem;
 }
 
 form {
@@ -35,6 +38,7 @@ form {
 	flex-direction: column;
 	width: 50%;
 	gap: 50px;
+	margin-top: 50px;
 
 	input, textarea {
 		background-color: var(--colorDark);
