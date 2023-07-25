@@ -12,6 +12,7 @@ import { MyskillsComponent } from './myskills/myskills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ProjectComponent } from './project/project.component';
 import { ContactComponent } from './contact/contact.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ContactComponent } from './contact/contact.component';
     MyskillsComponent,
     PortfolioComponent,
     ProjectComponent,
-    ContactComponent
+    ContactComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

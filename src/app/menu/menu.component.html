@@ -1,0 +1,15 @@
+<nav class="menu">
+	<div id="menuToggle" (click)="openMenu()"  
+	[ngClass]="status ? 'showMenu' : 'noShowMenu'">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<div class="menuContent">
+		<div class="aWrapper" *ngFor="let menu of menuList, let i = index" (click)="closeMenu(i)">
+			<div class="customBorder"></div>
+			<a href="#{{ menu.link }}">{{ menu.linkText }}</a>
+		</div>
+		<div class="triangle"></div>
+	</div>
+</nav>

@@ -1,6 +1,29 @@
 .projectImg {
 	width: 50%;
+	position: relative;
+
+	.hoverText {
+		position: absolute;
+		bottom: 50px;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: var(--colorDark);
+		color: var(--colorNuance);
+		padding: 10px 20px;
+		font-size: 1.2rem;
+		display: none;
+		border: 2px solid var(--colorHighlight);
+	}
+
+	&:hover {
+		.hoverText {
+			display: block;
+		}
+	}
 }
+
+
+
 
 .projectDescription {
 	flex: 1;
@@ -106,6 +129,8 @@ h4 {
 	font-weight: 100;
 	color: var(--colorHighlight)
 }
+
+
 
 
 

@@ -1,0 +1,12 @@
+.anker {
+	padding-top: 200px;
+	
+	&:target::before {
+		content: "";
+		display: block;
+		height: 200px; /* Hier wird der Versatz von 100px festgelegt */
+		margin-top: -200px; /* Negative Höhe des Versatzes, um den Link zu verschieben */
+	
+	}
+
+}
