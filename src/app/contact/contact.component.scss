@@ -18,9 +18,8 @@
 	flex-direction: column;
 	align-items: center;
 	gap: 50px;
+	position: relative;
 	
-
-
 	p {
 		font-family: var(--fontHeader);
 	}
@@ -105,3 +104,27 @@ button {
 	align-self: center;
 }
 
+.upArrow {
+	position: absolute;
+	right: var(--bodyPadding);
+	bottom: 50px;
+	color: var(--colorLight);
+	overflow-y: hidden;
+	height: 3.5rem;
+	transition: all 128 ease-in-out;
+
+	&:hover {
+		height: 5rem;
+		transition: all 256 ease-in-out;
+	}
+
+
+	p {
+		font-size: 5rem;
+		transform-origin: bottom;
+		max-height: max-content;
+		font-family: var(--fontText);
+		line-height: 5rem;
+	}
+
+}

@@ -8,7 +8,7 @@
 	<div class="menuContent">
 		<div class="aWrapper" *ngFor="let menu of menuList, let i = index" (click)="closeMenu(i)">
 			<div class="customBorder"></div>
-			<a href="#{{ menu.link }}">{{ menu.linkText }}</a>
+			<a>{{ menu.linkText }}</a>
 		</div>
 		<div class="triangle"></div>
 	</div>

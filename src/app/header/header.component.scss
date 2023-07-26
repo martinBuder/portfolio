@@ -1,3 +1,5 @@
+$smallMedia: 800px;
+
 .headerWrapper {
 	padding: 50px var(--bodyPadding);
 	display: flex;
@@ -14,4 +16,10 @@
 	width: 70px;
 }
 
+@media screen and (max-width: $smallMedia) {
+
+.logo {
+	width: 50px;
+}
+}	
 

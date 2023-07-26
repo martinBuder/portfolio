@@ -28,12 +28,17 @@ export class MenuComponent {
 
   closeMenu(i: number){
     let customBorder = document.getElementsByClassName('customBorder')[i];
+   
     customBorder.classList.add('fullBorder');
     
     setTimeout(() => {
-      this.status = !this.status
-    }, 300);
+      this.status = !this.status;
+      customBorder.classList.remove('fullBorder');
+      setTimeout(() => {
+        window.location.href = `#${this.menuList[i].link}`;
+      }, 300)
+    }, 800);
     
-    customBorder.classList.remove('fullBorder');
+ 
   }
 }

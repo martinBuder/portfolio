@@ -8,6 +8,8 @@
 		src: url(assets/font/Heebo-VariableFont_wght.ttf);
 	}
 
+	$smallMedia: 800px;
+
 :root {
 	--colorDark: #2a324b;
 	--colorNuance: #f4d35e;
@@ -44,6 +46,7 @@
 
 html {
 	scroll-behavior: smooth;
+	min-width: 100%;
 }
 
 body {
@@ -121,6 +124,33 @@ img {
 		filter: grayscale(0);
 		transition: all 128ms ease-in-out;
 
+	}
+}
+
+@media (max-width: $smallMedia) {
+	
+	:root {
+		--bodyPadding: 30px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		display: none;
+	}
+	
+	h2 {
+		font-size: 2rem;
+	}
+
+	h3 {
+		font-size: 1.6rem;
+	}
+
+	h4 {
+		font-size: 1.2rem;
+	}
+
+	p, button {
+		font-size: 0.9rem;
 	}
 }
 

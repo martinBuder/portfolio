@@ -1,3 +1,5 @@
+$smallMedia: 800px;
+
 nav {
 	cursor: pointer;
 }
@@ -38,10 +40,16 @@ nav {
 		}
 	}
 
+	.noShowMenu + .menuContent {
+		display: flex;
+		animation: menuGoes 500ms ease-in-out backwards;
+	}
+
+
 	.showMenu + .menuContent {
 		display: flex;
 		animation: menuComes 500ms ease-in-out forwards;
-
+	}
 		.aWrapper {
 			position: relative;
 			width: 50%;
@@ -77,7 +85,7 @@ nav {
 				}
 			}
 	}
-}
+
 
 #menuToggle.showMenu + .menuContent .aWrapper:hover {
 	.customBorder.fullBorder {
@@ -89,6 +97,12 @@ nav {
 
 	@keyframes menuComes {
 		to{
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes menuGoes {
+		from{
 			transform: translateY(0);
 		}
 	}
@@ -105,7 +119,7 @@ nav {
 		justify-content: center;
 		gap: 3rem;
 		align-items: center;
-		display: none;
+		// display: none;
 		transform: translateY(100vh);
 	}
 
@@ -135,6 +149,14 @@ nav {
 			width: 40%;
 			left: 60%;
 			height: 5px;
+		}
+	}
+
+	@media screen and (max-width: $smallMedia) {
+
+		.span {
+			width: 24px;
+			height: 2px;
 		}
 	}
 
