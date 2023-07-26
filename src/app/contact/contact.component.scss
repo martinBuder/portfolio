@@ -13,11 +13,13 @@
 	width: calc(100% + var(--bodyPadding) + var(--bodyPadding));
 	margin-left: calc(var(--bodyPadding) * -1);
 	color: var(--colorLight);
-	padding: 50px var(--bodyPadding);
+	padding: 0 var(--bodyPadding);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 50px;
+	
+
 
 	p {
 		font-family: var(--fontHeader);

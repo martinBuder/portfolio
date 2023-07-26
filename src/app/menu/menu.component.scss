@@ -95,13 +95,12 @@ nav {
 
 	.menuContent {
 		position: absolute;
-		top: 130px;
+		top: 125px;
 		left: 0;
 		right: 0;
 		padding: 0 var(--bodyPadding);
-		height: calc(100vh - 130px);
-		z-index: 2;
-		background-color: aquamarine;
+		height: calc(100vh - 125px);
+		background-color: var(--colorLight);
 		flex-direction: column;
 		justify-content: center;
 		gap: 3rem;
