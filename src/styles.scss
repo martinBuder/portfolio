@@ -10,8 +10,6 @@
 		src: url(assets/font/Heebo-VariableFont_wght.ttf);
 	}
 
-
-
 :root {
 	--colorDark: #2a324b;
 	--colorNuance: #f4d35e;
@@ -141,7 +139,9 @@ img {
 	}
 	
 	h2 {
-		font-size: 2rem;
+		font-size: 2.1rem;
+		width: 100%;
+		text-align: center;
 	}
 
 	h3 {
@@ -154,6 +154,10 @@ img {
 
 	p, button {
 		font-size: 0.9rem;
+	}
+
+	.imgHover {
+		filter: grayscale(0);
 	}
 }
 

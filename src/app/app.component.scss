@@ -1,6 +1,14 @@
+@import '../breakpoints';
+
 app-main {
 	display: flex;
 	flex-direction: column;
 	gap: 100px;
 }
 
+@media screen and (max-width: $smallMedia) {
+
+	app-main {
+		gap: 75px;
+	}
+}

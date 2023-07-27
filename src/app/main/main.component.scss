@@ -10,6 +10,21 @@
 		margin-top: -200px; /* Negative Höhe des Versatzes, um den Link zu verschieben */
 	
 	}
-
 }
+
+	@media screen and (max-width: $smallMedia) {
+		
+		.anker {
+			padding-top: 120px;
+
+				&:target::before {
+					content: "";
+					display: block;
+					height: 120px; /* Hier wird der Versatz von 100px festgelegt */
+					margin-top: -120px; /* Negative Höhe des Versatzes, um den Link zu verschieben */
+				}
+		}
+
+	}
+
 

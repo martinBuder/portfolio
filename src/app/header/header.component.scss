@@ -20,6 +20,10 @@ $smallMedia: 800px;
 
 @media screen and (max-width: $smallMedia) {
 
+	.headerWrapper {
+		padding-top: 30px;
+	}
+
 .logo {
 	width: 50px;
 }

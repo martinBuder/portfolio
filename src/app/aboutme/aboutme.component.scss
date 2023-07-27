@@ -15,3 +15,23 @@
 .meImg {
 	width: 42%
 }
+
+@media screen and (max-width: $smallMedia) {
+	.btnContainer {
+		position: absolute;
+		top: 70vh;
+		left: 50%;
+		transform: translateX(-50%);
+  min-width: min-content;
+		white-space: nowrap;
+	}
+
+	.aboutContent {
+		flex-direction: column;
+		margin-top: 30px;
+	}
+
+	.meImg {
+		width: 100%;
+	}
+}

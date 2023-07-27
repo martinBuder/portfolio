@@ -20,11 +20,6 @@ app-project {
 	margin-top: 150px;
 	position: relative;
 
-	&:hover {
-		.imgBorder {
-			opacity: 1;
-		}
-	}
 }
 
 app-project > a {
@@ -34,4 +29,21 @@ app-project > a {
 
 app-project:nth-child(2n) {
 	flex-direction: row-reverse;
+}
+
+@media screen and (max-width: $smallMedia) {
+	app-project, app-project:nth-child(2n) {
+		flex-direction: column;
+		gap: 50px;
+	}
+
+	.headerSpace {
+		width: 100%;
+	}
+
+	h4 {
+		margin-top: 30px;
+		font-size: 1rem;
+		font-weight: 300;
+	}
 }

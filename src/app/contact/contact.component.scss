@@ -70,7 +70,7 @@ form {
 					color: var(--colorLight);
 					font-size: 1.2rem;
 				}
-	}
+			}
 
 		
 	}
@@ -92,6 +92,8 @@ form {
 .fieldWrapper:focus-within div {
  display: block;
 }
+
+@media screen and (max-width: $smallMedia) {
 
 textarea {
 	height: 20vh;
@@ -128,4 +130,31 @@ button {
 		line-height: 5rem;
 	}
 
+}
+
+	.triangleContainer {
+		border-bottom-width: 50px;
+	}
+
+	.contactContainer {
+		gap: 20px;
+
+		a {
+			display: none;
+		}
+	}
+
+	form {
+		width: 90%;
+		gap: 20px;
+		margin-top: 20px;
+
+		input, textarea {
+			font-size: 1rem;
+
+			&::placeholder {
+				font-size: 1rem;
+			}
+		}
+	}
 }

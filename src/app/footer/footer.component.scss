@@ -77,3 +77,39 @@ a {
 		}
 	}
 }
+
+@media screen and (max-width: $smallMedia) {
+
+	footer {
+		flex-direction: column-reverse;
+		align-items: center;
+		padding: 70px 0;
+	}
+
+	.meFooter {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.logo {
+		width: 40px;
+		margin: 10px 0;
+	}
+
+
+	.bsideFooter {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	a.footerSubLink {
+		bottom: -110px;
+		font-size: 0.8rem;
+	}
+
+
+
+}

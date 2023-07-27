@@ -134,6 +134,62 @@ h4 {
 	color: var(--colorHighlight)
 }
 
+@media screen and (max-width: $smallMedia) {
+
+.projectImg {
+	width: 90%;
+	margin-right: 10%;
+}
+
+:host-context(app-project:nth-child(2n)) .projectImg {
+	margin-left: 10%;
+}
+
+.imgBorder, .projectImg .hoverText {
+	display: block;
+}
+
+.projectImg .hoverText {
+	font-size: 1rem;
+	white-space: nowrap;
+	padding: 5px 10px;
+	bottom: -0.5rem;
+
+}
+
+.numbering {
+	top: -3rem;
+	font-size: 1.5rem;
+}
+
+.projectArea {
+	display: flex;
+	height: 200px;
+	gap: 20px;
+	transform: translateX(0);
+}
+
+:host-context(app-project:nth-child(2n)) .projectArea {
+	align-items: flex-end;
+
+	p {
+		text-align: right;
+	}
+}
+
+:host-context(app-project:hover) .projectArea, :host-context(app-project:nth-child(2n):hover) .projectArea {
+	animation: none;
+	transform: translateX(0);
+	opacity: 1;
+
+}
+
+h4{
+	font-size: 0.9rem;
+}
+
+}
+
 
 
 
