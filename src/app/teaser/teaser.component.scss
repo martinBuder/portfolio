@@ -1,6 +1,4 @@
-$smallMedia: 800px;
-
-
+@import '../../breakpoints';
 
 .teaserWrapper {
 	display: flex;
@@ -97,15 +95,13 @@ $smallMedia: 800px;
 
 	.scrollDownContainer {
 		right: 0;
-		height: 150px;
+		max-height: max-content;
+		line-height: 1rem;
+	
 
 		p{
 			margin-top: 20px;
 		}
-	}
-
-	.scrollDownContainer {
-		line-height: 1rem;
 	}
 
 	.downArrow {
@@ -168,6 +164,10 @@ $smallMedia: 800px;
 			font-size: 1rem;
 			font-weight: 300;
 		}
+	}
+
+	.downArrow {
+		display: none;
 	}
 
 	
