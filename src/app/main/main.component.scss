@@ -1,5 +1,11 @@
 @import '../../breakpoints';
 
+.mainWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 150px;
+}
+
 .anker {
 	padding-top: 200px;
 	
@@ -14,17 +20,20 @@
 
 	@media screen and (max-width: $smallMedia) {
 		
+		.mainWrapper {
+			gap: 50px;
+		}
+
 		.anker {
 			padding-top: 120px;
 
 				&:target::before {
 					content: "";
 					display: block;
-					height: 120px; /* Hier wird der Versatz von 100px festgelegt */
-					margin-top: -120px; /* Negative Höhe des Versatzes, um den Link zu verschieben */
+					height: 120px; /* for find the right anker point  */
+					margin-top: -120px; 
 				}
 		}
-
 	}
 
 

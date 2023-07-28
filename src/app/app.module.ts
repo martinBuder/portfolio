@@ -14,6 +14,7 @@ import { ProjectComponent } from './project/project.component';
 import { ContactComponent } from './contact/contact.component';
 import { MenuComponent } from './menu/menu.component';
 import { VisitcardComponent } from './visitcard/visitcard.component';
+import { LegalnoticeComponent } from './legalnotice/legalnotice.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { VisitcardComponent } from './visitcard/visitcard.component';
     ProjectComponent,
     ContactComponent,
     MenuComponent,
-    VisitcardComponent
+    VisitcardComponent,
+    LegalnoticeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,49 @@
+@import '../../breakpoints';
+
+.leagalnoticeWrapper {
+	min-height: 100vh;
+	position: relative;
+}
+
+h1 {
+	font-size: 1.6rem;
+}
+
+h2, h3 ,h4 {
+	font-size: 1.2rem;
+}
+
+p, a, li {
+	font-size: 0.9rem;
+}
+
+.impressum, .dsgvo {
+	padding: 200px 0;
+
+		a {
+			filter: brightness(1.5);
+		
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	ul {
+		padding-left: 2rem;
+
+	}
+}
+
+div.dsgvo {
+	margin-top: -150px;
+}
+
+.triangleContainer {
+	width: 0;
+	height: 0;
+	border-left: 0px solid transparent;
+	border-right: calc(100vw - 10px) solid transparent; //10px is scroll barwidth
+	border-bottom: 50px solid var(--colorDark);
+	margin-left: calc(var(--bodyPadding) * -1);
+	position: absolute;
+	bottom: 0;
+}
