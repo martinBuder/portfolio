@@ -134,15 +134,16 @@ h4 {
 	color: var(--colorHighlight)
 }
 
-@media screen and (max-width: $smallMedia) {
+
+@media screen and (max-width: $betweenMedia) {
 
 .projectImg {
-	width: 90%;
+	width: 65%;
 	margin-right: 10%;
 }
 
 :host-context(app-project:nth-child(2n)) .projectImg {
-	margin-left: 10%;
+	margin: 0 0 0 auto;
 }
 
 .imgBorder, .projectImg .hoverText {
@@ -159,7 +160,7 @@ h4 {
 
 .numbering {
 	top: -3rem;
-	font-size: 1.5rem;
+	font-size: 2rem;
 }
 
 .projectArea {
@@ -181,12 +182,27 @@ h4 {
 	animation: none;
 	transform: translateX(0);
 	opacity: 1;
-
 }
 
 h4{
 	font-size: 0.9rem;
 }
+
+}
+
+@media screen and (max-width: $smallMedia) {
+
+	.projectImg {
+		width: 90%;
+	}
+
+	.numbering {
+		font-size: 1.5rem;
+	}
+
+	:host-context(app-project:nth-child(2n)) .projectImg {
+		margin-left: 10%;
+	}
 
 }
 

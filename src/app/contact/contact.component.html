@@ -1,28 +1,34 @@
 <div class="triangleContainer"></div>
 <div class="contactContainer">
 	<h2>Say Hi!</h2>
-	<h4>Want to discuss a new project?</h4>
-	<p>Say hello! Let's discuss your ideas and make it happen.</p>
-	<form action="" method="post" (submit)="send()">
-		<div class="fieldWrapper">
-			<div>Your name</div>
-			<input type="name" placeholder="Your name" required>
+	<div class="contactSite">
+		<app-visitcard></app-visitcard>
+		<div class="contactForm">
+			<h4>Want to discuss a new project?</h4>
+			<p>Say hello! Let's discuss your ideas and make it happen.</p>
+			<form action="" method="post" (submit)="send()">
+				<div class="fieldWrapper">
+					<div>Your name</div>
+					<input type="name" placeholder="Your name" required>
+				</div>
+				<div class="fieldWrapper">
+					<div>Your email</div>
+					<input type="email" placeholder="Your email" required>
+				</div>
+				<div class="fieldWrapper">
+					<div>Your message</div>
+					<textarea type="text" placeholder="Your message" required></textarea>
+				</div>
+				<button class="btnHover">
+					Send message
+				</button>
+			</form>
 		</div>
-		<div class="fieldWrapper">
-			<div>Your email</div>
-			<input type="email" placeholder="Your email" required>
-		</div>
-		<div class="fieldWrapper">
-			<div>Your message</div>
-			<textarea type="text" placeholder="Your message" required></textarea>
-		</div>
-		<button class="btnHover">
-			Send message
-		</button>
-	</form>
+	</div>
 	<a href="#header">
 		<div class="upArrow">
 			<p>&uarr;</p>
 		</div>
 	</a>
 </div>
+

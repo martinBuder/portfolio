@@ -1,7 +1,5 @@
 @import '../../breakpoints';
 
-$smallMedia: 800px;
-
 nav {
 	cursor: pointer;
 }
@@ -46,7 +44,6 @@ nav {
 		display: flex;
 		animation: menuGoes 500ms ease-in-out backwards;
 	}
-
 
 	.showMenu + .menuContent {
 		display: flex;
@@ -153,6 +150,19 @@ nav {
 			height: 5px;
 		}
 	}
+
+	@media screen and (max-width: $betweenMedia) {
+
+		.aWrapper {
+			width: 70%;
+			height: 10vh;
+
+			a{
+			font-size: clamp(2.5rem, -0.4545rem + 7.2727vw, 5rem);
+		} 
+
+	}	
+}
 
 	@media screen and (max-width: $smallMedia) {
 

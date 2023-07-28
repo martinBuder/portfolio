@@ -9,6 +9,13 @@
 	margin-left: calc(var(--bodyPadding) * -1);
 }
 
+.contactForm {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .contactContainer {
 	background-color: var(--colorDark);
 	width: calc(100% + var(--bodyPadding) + var(--bodyPadding));
@@ -71,8 +78,6 @@ form {
 					font-size: 1.2rem;
 				}
 			}
-
-		
 	}
 
 	.fieldWrapper {
@@ -93,18 +98,16 @@ form {
  display: block;
 }
 
-@media screen and (max-width: $smallMedia) {
-
-textarea {
-	height: 20vh;
-}
-
 button {
 	color: var(--colorLight);
 	width: min-content;
 	white-space: nowrap;
 	border-color: var(--colorLight);
 	align-self: center;
+}
+
+textarea {
+	height: 20vh;
 }
 
 .upArrow {
@@ -129,8 +132,45 @@ button {
 		font-family: var(--fontText);
 		line-height: 5rem;
 	}
+}
+
+.contactSite {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
 
 }
+
+app-visitcard {
+	display: flex;
+	align-items: center;
+}
+
+@media screen and (max-width: $betweenMedia) {
+
+	.triangleContainer {
+		border-bottom-width: 100px;
+	}
+
+	form {
+		width: 65%;
+	}
+
+		.cardBackgroundWrapper {
+			display: none;
+		}
+	
+		.contactSite {
+			justify-content: center;
+		}
+	
+		.contactForm {
+			width: 100%;
+		}
+
+}
+
+@media screen and (max-width: $smallMedia) {
 
 	.triangleContainer {
 		border-bottom-width: 50px;

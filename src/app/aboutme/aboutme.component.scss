@@ -16,6 +16,33 @@
 	width: 42%
 }
 
+@media screen and (max-width: $betweenMedia) {
+
+	.meImg {
+		width: 55%;
+		max-width: 600px;
+		
+
+		img {
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+@media screen and (max-width: 1100px) {
+
+	.meImg {
+		width: 40%;
+	}
+
+	button {
+		margin-top: 30px;
+	}
+
+
+}
+
 @media screen and (max-width: $smallMedia) {
 	.btnContainer {
 		position: absolute;
@@ -26,12 +53,12 @@
 		white-space: nowrap;
 	}
 
+	.meImg {
+		width: 100%;
+	}
+
 	.aboutContent {
 		flex-direction: column;
 		margin-top: 30px;
-	}
-
-	.meImg {
-		width: 100%;
 	}
 }

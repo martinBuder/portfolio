@@ -31,6 +31,21 @@ app-project:nth-child(2n) {
 	flex-direction: row-reverse;
 }
 
+@media screen and (max-width: $betweenMedia) {
+	app-project, app-project:nth-child(2n) {
+		flex-direction: column;
+		gap: 50px;
+	}
+
+	.headerSpace {
+		width: 100%;
+
+		h4 {
+			width: 80%;
+		}
+	}
+}
+
 @media screen and (max-width: $smallMedia) {
 	app-project, app-project:nth-child(2n) {
 		flex-direction: column;

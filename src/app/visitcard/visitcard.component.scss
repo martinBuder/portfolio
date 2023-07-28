@@ -1,0 +1,185 @@
+@import '../../breakpoints';
+
+.cardBackgroundWrapper {
+	display: flex;
+	align-items: center;
+
+	#card {
+		filter: grayscale(0.9);
+	}
+
+	:host-context(.contactSite:hover) #card {
+		filter: grayscale(0);
+	}
+}
+
+// card
+
+.li-card {
+width: 250px;
+height: 390px;
+list-style: none;
+position: relative;
+font-family:'Open Sans';
+font-weight: 300;
+-webkit-perspective: 1000px;
+-moz-perspective: 1000px;
+perspective: 1000px; 
+}
+
+#card div {
+max-width: 100%;
+max-height: 100%;
+position: absolute;
+-webkit-transition: all 2s ease;
+-moz-transition: all 2s ease;
+transition: all 2s ease;
+-webkit-backface-visibility: hidden;
+-moz-backface-visibility: hidden;    
+backface-visibility: hidden;
+}
+
+:host-context(.contactSite:hover) .front{
+z-index: 0;
+-webkit-transform: rotateY(-180deg);
+-moz-transform: rotateY(-180deg);
+transform: rotateY(-180deg);    
+}
+
+:host-context(.contactSite:hover) .back {
+-webkit-transform: rotateY(0deg);
+-moz-transform: rotateY(0deg);    
+transform: rotateY(0deg);
+}
+
+.back {
+-webkit-transform: rotateY(180deg);
+-moz-transform: rotateY(180deg);
+transform: rotateY(180deg);    
+}
+
+/*Design card both sites*/
+
+#card {
+margin-top: 2rem;
+}
+
+.h2-card {
+	max-width: max-content;
+	margin: 0 auto !important;
+}
+
+.front, .back {
+border-radius: 5px;
+border: 0.3rem solid var(--colorNuance);
+background: var(--colorDark);
+color: var(--colorNuance);
+font-family: source-code-pro, monospace;
+font-weight: 400;
+font-style: normal;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 100%;
+}
+
+.card-inhalts-wrapper {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: space-around;
+width: 100%;
+height: 100%;
+padding: 20px;
+}
+
+address {
+	margin-left: 10px !important;
+}
+
+.front .color-dys, .back .card-back {
+font-family: source-code-pro, monospace;
+font-weight: 900;
+font-style: normal; 
+}
+
+.color-dys, .card-back {
+color: var(--colorHighlight);
+}
+
+
+/*design card just front */
+
+#card .front {
+padding: 1.5vw 1.5vh;
+}
+
+.front .color-dys {
+font-size: 48px;
+}
+
+#card .card-sub-text {
+font-size: 40px;
+line-height: 42px;
+padding-left: 36px;
+}
+
+#card h4 {
+margin: 0;
+}
+
+#card .front h4 {
+font-family: source-code-pro, monospace;
+font-weight: 100;
+font-style: normal; 
+color: #b5b5b5;
+}
+
+#card .front h4 {
+margin-top: 1rem;
+line-height: 30px;
+font-size: 20px;
+}
+
+
+
+/*design card just backs site */
+
+
+#card .back {
+width: 100%;
+padding-top: 0.4rem;
+line-height: 20px;
+font-size: 16px;
+}
+
+.back address {
+width: 100%;
+margin: 1rem auto 1rem 2rem;
+font-family: source-code-pro, monospace;
+font-weight: 300;
+font-style: normal;
+position: relative;
+
+}
+
+.back address .card-back {
+margin-left: -0.8rem;
+}
+
+.back a {
+color: var(--colorNuance);    
+text-decoration: none;
+}
+
+.back a:hover {
+color: var(--colorLight);
+}
+
+@media screen and (max-width: $betweenMedia) {
+
+		.cardBackgroundWrapper {
+			display: none;
+		}
+	}

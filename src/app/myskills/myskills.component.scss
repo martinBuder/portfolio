@@ -18,12 +18,25 @@
 		background-color: var(--colorLight);
 		padding: 10px 20px;
 		transform: translateX(-50%);
+		min-width: min-content;
 	}
 }
 
 .skillContainer {
 	width: 10%;
 	margin: 0 0 10% 10%;
+}
+
+@media screen and (max-width: $betweenMedia) {
+	.skillsWrapper {
+		padding-top: calc(2rem + 5%);
+		padding-right: 5%;
+
+		h2 {
+			padding: 10px;
+			top: -3rem;
+		}
+	}
 }
 
 @media screen and (max-width: $smallMedia) {
@@ -34,8 +47,8 @@
 
 		h2 {
 			padding: 10px;
-			width: 88%;
 			top: -2rem;
+			max-width: max-content;
 		}
 	}
 

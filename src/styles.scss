@@ -134,7 +134,7 @@ img {
 	}
 
 	h2 {
-		font-size: clamp(2.5rem, 0.0294rem + 6.5882vw, 6rem);
+		font-size: clamp(2.1rem, 0.0294rem + 6.5882vw, 6rem);
 	}
 
 	h3 {
@@ -144,7 +144,6 @@ img {
 	h4 {
 		font-size: 1.2rem;
 	}
-
 }
 
 @media (max-width: $smallMedia) {
@@ -158,7 +157,6 @@ img {
 	}
 	
 	h2 {
-		font-size: 2.1rem;
 		width: 100%;
 		text-align: center;
 	}
