@@ -134,13 +134,6 @@ textarea {
 	}
 }
 
-.contactSite {
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
-
-}
-
 app-visitcard {
 	display: flex;
 	align-items: center;
@@ -158,10 +151,6 @@ app-visitcard {
 
 		.cardBackgroundWrapper {
 			display: none;
-		}
-	
-		.contactSite {
-			justify-content: center;
 		}
 	
 		.contactForm {

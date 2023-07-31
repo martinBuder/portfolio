@@ -8,7 +8,7 @@
 		filter: grayscale(0.9);
 	}
 
-	:host-context(.contactSite:hover) #card {
+	:host-context(.imprintWrapper:hover) #card {
 		filter: grayscale(0);
 	}
 }
@@ -39,14 +39,14 @@ transition: all 2s ease;
 backface-visibility: hidden;
 }
 
-:host-context(.contactSite:hover) .front{
+:host-context(.imprintWrapper:hover) .front{
 z-index: 0;
 -webkit-transform: rotateY(-180deg);
 -moz-transform: rotateY(-180deg);
 transform: rotateY(-180deg);    
 }
 
-:host-context(.contactSite:hover) .back {
+:host-context(.imprintWrapper:hover) .back {
 -webkit-transform: rotateY(0deg);
 -moz-transform: rotateY(0deg);    
 transform: rotateY(0deg);
@@ -145,7 +145,6 @@ font-size: 20px;
 
 /*design card just backs site */
 
-
 #card .back {
 width: 100%;
 padding-top: 0.4rem;
@@ -176,9 +175,26 @@ text-decoration: none;
 color: var(--colorLight);
 }
 
-@media screen and (max-width: $betweenMedia) {
+@media screen and (max-width: $smallMedia) {
 
-		.cardBackgroundWrapper {
-			display: none;
+	:host-context(.imprintWrapper) .front{
+		z-index: 0;
+		-webkit-transform: rotateY(-180deg);
+		-moz-transform: rotateY(-180deg);
+		transform: rotateY(-180deg);    
 		}
+		
+		:host-context(.imprintWrapper) .back {
+		-webkit-transform: rotateY(0deg);
+		-moz-transform: rotateY(0deg);    
+		transform: rotateY(0deg);
+		}
+		
+		.back {
+		-webkit-transform: rotateY(180deg);
+		-moz-transform: rotateY(180deg);
+		transform: rotateY(180deg);    
+		}
+		
+
 	}

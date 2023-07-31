@@ -17,7 +17,13 @@ p, a, li {
 	font-size: 0.9rem;
 }
 
-.impressum, .dsgvo {
+.imprintWrapper {
+	display: flex;
+	gap: 30px;
+	align-items: center;
+}
+
+.imprintWrapper, .dsgvo {
 	padding: 200px 0;
 
 		a {
@@ -46,4 +52,10 @@ div.dsgvo {
 	margin-left: calc(var(--bodyPadding) * -1);
 	position: absolute;
 	bottom: 0;
+}
+
+@media screen and (max-width: $smallMedia) {
+	.imprintWrapper {
+		flex-direction: column-reverse;
+	}
 }
