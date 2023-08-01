@@ -1,4 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -6,8 +7,28 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
-@ViewChild('messageForm') messageForm!: ElementRef<HTMLFormElement>;
-@ViewChild('name') name!: ElementRef;
+
+  public contactForm : FormGroup = new FormGroup({
+    name: new FormControl ('', [
+      Validators.required,
+      Validators.minLength(4),
+    ], []),
+    email: new FormControl ('', [
+      Validators.required,
+      Validators.minLength(6),
+      Validators.email,
+    ], []),
+    message: new FormControl ('', [
+      Validators.required,
+      Validators.minLength(4),
+    ], []),
+  });
+
+  constructor() {
+    this.contactForm.valueChanges.subscribe();
+  }
+
+@ViewChild('name') name !: ElementRef;
 @ViewChild('email') email!: ElementRef;
 @ViewChild('message') message!: ElementRef;
 @ViewChild('sendBtn') sendBtn!: ElementRef;
@@ -15,7 +36,6 @@ export class ContactComponent {
 
 
   async sendMessage() {
-    // action="https://designyourstage.com/sendMail/send_mail.php";
    let name = this.name.nativeElement;
    let email = this.email.nativeElement;
    let message = this.message.nativeElement;
@@ -24,7 +44,6 @@ export class ContactComponent {
    name.disabled = true;
    email.disabled = true;
    message.disabled = true;
-   sendBtn.disabled = true;
    
    paperPlane.classList.add('sending');
    let formdata = new FormData;
@@ -39,7 +58,7 @@ export class ContactComponent {
     }
    )
 
-   sendBtn.innerHTML = 'Thanks your Message is sent!';
+   sendBtn.innerHTML = 'Thanks, your Message is sent!';
    setTimeout(() => {
     sendBtn.innerHTML = 'Send message';
     name.disabled = false;
@@ -48,7 +67,6 @@ export class ContactComponent {
     email.value = '';
     message.disabled = false;
     message.value = '';
-    sendBtn.disabled = false;
     paperPlane.classList.remove('sending');
    }, 3000)
 

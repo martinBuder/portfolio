@@ -78,7 +78,24 @@ form {
 					color: var(--colorLight);
 					font-size: 1.2rem;
 				}
+
+				&.ng-touched, &.ng-dirty {
+					&.ng-invalid {
+						border-color: red;
+					}
+
+					&.ng-valid {
+						border-color: green;
+					}
+				}
 			}
+	}
+
+	.error {
+		color: red;
+		font-size: 1rem;
+		font-weight: 100 !important;
+		font-family: var(--fontText);
 	}
 
 	.fieldWrapper {

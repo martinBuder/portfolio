@@ -15,7 +15,7 @@ import { ContactComponent } from './contact/contact.component';
 import { MenuComponent } from './menu/menu.component';
 import { VisitcardComponent } from './visitcard/visitcard.component';
 import { LegalnoticeComponent } from './legalnotice/legalnotice.component';
-import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ReactiveFormsModule} from '@angular/forms';
 import { CursorCircleComponent } from './cursor-circle/cursor-circle.component';
 
 @NgModule({
@@ -38,7 +38,6 @@ import { CursorCircleComponent } from './cursor-circle/cursor-circle.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     ReactiveFormsModule,
   ],
   providers: [],

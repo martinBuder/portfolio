@@ -7,23 +7,33 @@
 			<div class="paperPlane" #paperPlane>
 				<img src="assets/img/paper-plane.png" alt="">
 			</div>
-			<form #messageForm="ngForm" (submit)="sendMessage()" novalidate>
+			<form [formGroup]="contactForm" (submit)="sendMessage()">
 				<div class="fieldWrapper">
-					<div>Your name</div>
-					<input type="name" placeholder="Your name" name="name" #name required>
+						<div>Your name</div>
+						<input formControlName="name" type="text" placeholder="Your name" #name>
+						<ng-container *ngIf="contactForm.controls['name'].dirty || contactForm.controls['name'].touched">
+							<p class="error" *ngIf="contactForm.controls['name'].errors">Please write your name in this field!</p>
+						</ng-container>
+	
 				</div>
 				<div class="fieldWrapper">
-					<div>Your email</div>
-					<input type="email" placeholder="Your email" name="email" #email required>
+						<div>Your email</div>
+						<input formControlName="email" type="email" placeholder="Your email" #email>
+						<ng-container *ngIf="contactForm.controls['email'].dirty || contactForm.controls['email'].touched">
+							<p class="error" *ngIf="contactForm.controls['email'].errors">Please write your correct email in this field!</p>
+						</ng-container>
 				</div>
 				<div class="fieldWrapper">
-					<div>Your message</div>
-					<textarea type="text" placeholder="Your message" name="message" #message required></textarea>
+						<div>Your message</div>
+						<textarea formControlName="message" type="text" placeholder="Your message" #message></textarea>
+						<ng-container *ngIf="contactForm.controls['message'].dirty || contactForm.controls['message'].touched">
+							<p class="error" *ngIf="contactForm.controls['message'].errors">Please write your message in this field!</p>
+						</ng-container>
 				</div>
-				<button class="btnHover" #sendBtn type="submit" >
-					Send message
+				<button [disabled]="!contactForm.valid && (contactForm.dirty || contactForm.touched)" class="btnHover" type="submit" #sendBtn>
+						Send message
 				</button>
-			</form>
+		</form>
 			<a class="upArrow" href="#header">
 					<p>Scroll<br>Up</p>
 			</a>

@@ -144,6 +144,10 @@ img {
 	h4 {
 		font-size: 1.2rem;
 	}
+
+	.imgHover {
+		filter: grayscale(0);
+	}
 }
 
 @media (max-width: $smallMedia) {
@@ -171,9 +175,7 @@ img {
 		font-size: 0.9rem;
 	}
 
-	.imgHover {
-		filter: grayscale(0);
-	}
+
 }
 
 
