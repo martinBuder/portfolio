@@ -16,16 +16,22 @@ $smallMedia: 800px;
 
 .logo {
 	width: 70px;
+	transition: all 800ms ease-in-out;
+
+	&:hover {
+		transform: rotate(-360deg);
+		filter: brightness(1.4);
+	}
 }
 
 @media screen and (max-width: $smallMedia) {
 
 	.headerWrapper {
-		padding-top: 30px;
+		padding-top: 15px;
 	}
 
-.logo {
-	width: 50px;
-}
+	.logo {
+		width: 50px;
+	}
 }	
 

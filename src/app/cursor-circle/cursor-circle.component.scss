@@ -1,0 +1,11 @@
+/* cursor-circle.component.css */
+.cursorCircle {
+	position: fixed;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	background: radial-gradient(circle, rgba(244, 211, 94, 0.1) 0%, rgba(244, 211, 94, 0) 100%) ; 
+	pointer-events: none; /* Dadurch wird sichergestellt, dass der Cursorkreis nicht mit Mausereignissen interferiert */
+	z-index: 9999; /* Stelle sicher, dass der Kreis über anderen Elementen liegt */
+}

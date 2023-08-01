@@ -27,6 +27,7 @@
 	align-items: center;
 	gap: 50px;
 	position: relative;
+	overflow: hidden;
 	
 	p {
 		font-family: var(--fontHeader);
@@ -113,30 +114,57 @@ textarea {
 .upArrow {
 	position: absolute;
 	right: var(--bodyPadding);
-	bottom: 50px;
+	bottom: 0;
 	color: var(--colorLight);
-	overflow-y: hidden;
-	height: 3.5rem;
 	transition: all 128 ease-in-out;
+	line-height: 1rem;
+	padding: 20px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	aspect-ratio: 1/1;
+	// margin-bottom: -20px;
+	margin-right: -20px;
+	filter: brightness(0.5);
 
 	&:hover {
-		height: 5rem;
-		transition: all 256 ease-in-out;
+		transform: scale(0.9);
+		box-shadow: inset 0.5px 0.5px 0.5px 0.5px rgba($color: #fffcf3, $alpha: 0.4);
+		transition: all 128ms ease-in-out;
+		filter: brightness(1);
 	}
 
-
 	p {
-		font-size: 5rem;
-		transform-origin: bottom;
-		max-height: max-content;
 		font-family: var(--fontText);
-		line-height: 5rem;
+		font-weight: 100;
+		text-align: center;
 	}
 }
 
 app-visitcard {
 	display: flex;
 	align-items: center;
+}
+
+.paperPlane {
+	width: auto;
+	height: 5vh;
+	aspect-ratio: 1/1;
+	position: absolute;
+	bottom: 25%;
+	left: -100px;
+	z-index: 50;
+}
+
+.sending {
+	animation: sending 1600ms ease-in-out forwards;
+}
+
+@keyframes sending {
+	to {
+		transform: translate(120vw, -50vh);
+	}
 }
 
 @media screen and (max-width: $betweenMedia) {
@@ -155,6 +183,7 @@ app-visitcard {
 	
 		.contactForm {
 			width: 100%;
+
 		}
 
 }

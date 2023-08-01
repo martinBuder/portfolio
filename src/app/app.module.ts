@@ -15,6 +15,8 @@ import { ContactComponent } from './contact/contact.component';
 import { MenuComponent } from './menu/menu.component';
 import { VisitcardComponent } from './visitcard/visitcard.component';
 import { LegalnoticeComponent } from './legalnotice/legalnotice.component';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { CursorCircleComponent } from './cursor-circle/cursor-circle.component';
 
 @NgModule({
   declarations: [
@@ -30,11 +32,14 @@ import { LegalnoticeComponent } from './legalnotice/legalnotice.component';
     ContactComponent,
     MenuComponent,
     VisitcardComponent,
-    LegalnoticeComponent
+    LegalnoticeComponent,
+    CursorCircleComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

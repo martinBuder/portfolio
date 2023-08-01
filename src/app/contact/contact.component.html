@@ -4,28 +4,30 @@
 		<div class="contactForm">
 			<h4>Want to discuss a new project?</h4>
 			<p>Say hello! Let's discuss your ideas and make it happen.</p>
-			<form action="" method="post" (submit)="send()">
+			<div class="paperPlane" #paperPlane>
+				<img src="assets/img/paper-plane.png" alt="">
+			</div>
+			<form #messageForm="ngForm" (submit)="sendMessage()" novalidate>
 				<div class="fieldWrapper">
 					<div>Your name</div>
-					<input type="name" placeholder="Your name" required>
+					<input type="name" placeholder="Your name" name="name" #name required>
 				</div>
 				<div class="fieldWrapper">
 					<div>Your email</div>
-					<input type="email" placeholder="Your email" required>
+					<input type="email" placeholder="Your email" name="email" #email required>
 				</div>
 				<div class="fieldWrapper">
 					<div>Your message</div>
-					<textarea type="text" placeholder="Your message" required></textarea>
+					<textarea type="text" placeholder="Your message" name="message" #message required></textarea>
 				</div>
-				<button class="btnHover">
+				<button class="btnHover" #sendBtn type="submit" >
 					Send message
 				</button>
 			</form>
+			<a class="upArrow" href="#header">
+					<p>Scroll<br>Up</p>
+			</a>
+		
 		</div>
 	</div>
-	<a href="#header">
-		<div class="upArrow">
-			<p>&uarr;</p>
-		</div>
-	</a>
-
+	

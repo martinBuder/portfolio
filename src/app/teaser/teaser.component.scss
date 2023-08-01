@@ -95,21 +95,19 @@
 		right: 0;
 		max-height: max-content;
 		line-height: 1rem;
-	
+		padding: 20px;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		aspect-ratio: 1/1;
+		margin-bottom: -20px;
+		margin-right: -20px;
 
-		p{
-			margin-top: 20px;
-		}
-	}
-
-	.downArrow {
-		text-align: center;
-		overflow: hidden;
-		height: 100px;
-
-		p{
-			font-size: 5rem;
-			animation: arrowSlideDown 2s infinite ease;
+		&:hover {
+			transform: scale(0.9);
+			box-shadow: inset 0.5px 0.5px 0.5px 0.5px rgba($color: #2a324b, $alpha: 0.4);
+			transition: all 128ms ease-in-out;
 		}
 	}
 
@@ -194,13 +192,7 @@
 
 	.teaserMail {
 		bottom: 20px;
-	}
-
-	.downArrow {
-		display: none;
-	}
-
-	
+	}	
 }
 
 
