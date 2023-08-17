@@ -10,6 +10,7 @@
 	height: 100svh;
 	position: relative;
 
+
 	.teaserTextContainer {
 
 			h1 {
@@ -149,9 +150,10 @@
 
 @media screen and (max-width: $smallMedia) {
 	
-	
+
 	
 	.teaserWrapper .teaserTextContainer {
+		
 
 		h1 {
 			font-size: 3rem;

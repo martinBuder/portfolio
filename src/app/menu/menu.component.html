@@ -6,9 +6,9 @@
 		<span></span>
 	</div>
 	<div class="menuContent">
-		<div class="aWrapper" *ngFor="let menu of menuList, let i = index" (click)="closeMenu(i)">
+		<div class="aWrapper" *ngFor="let menu of menuList, let i = index" >
 			<div class="customBorder"></div>
-			<a>{{ menu.linkText }}</a>
+			<a (click)="closeMenu(i)">{{ menu.linkText }}</a>
 		</div>
 		<div class="triangle"></div>
 	</div>

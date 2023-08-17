@@ -128,41 +128,12 @@ textarea {
 	height: 20vh;
 }
 
-.upArrow {
-	position: absolute;
-	right: var(--bodyPadding);
-	bottom: 0;
-	color: var(--colorLight);
-	transition: all 128 ease-in-out;
-	line-height: 1rem;
-	padding: 20px;
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	aspect-ratio: 1/1;
-	// margin-bottom: -20px;
-	margin-right: -20px;
-	filter: brightness(0.5);
-
-	&:hover {
-		transform: scale(0.9);
-		box-shadow: inset 0.5px 0.5px 0.5px 0.5px rgba($color: #fffcf3, $alpha: 0.4);
-		transition: all 128ms ease-in-out;
-		filter: brightness(1);
-	}
 
 	p {
 		font-family: var(--fontText);
 		font-weight: 100;
 		text-align: center;
 	}
-}
-
-app-visitcard {
-	display: flex;
-	align-items: center;
-}
 
 .paperPlane {
 	width: auto;
@@ -209,10 +180,18 @@ app-visitcard {
 
 	.triangleContainer {
 		border-bottom-width: 50px;
+		width: 100vw;
+		margin-left: calc(var(--bodyPadding) * -1);
+
 	}
 
 	.contactContainer {
 		gap: 20px;
+		width: 100vw;
+		margin-left: calc(var(--bodyPadding) * -1);
+	
+		
+		
 
 		a {
 			display: none;

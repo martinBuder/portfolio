@@ -27,6 +27,7 @@ export class MenuComponent {
   }
 
   closeMenu(i: number){
+    
     let customBorder = document.getElementsByClassName('customBorder')[i];
    
     customBorder.classList.add('fullBorder');
@@ -37,7 +38,7 @@ export class MenuComponent {
       setTimeout(() => {
         window.location.href = `#${this.menuList[i].link}`;
       }, 300)
-    }, 800);
+    }, 500);
     
  
   }

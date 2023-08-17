@@ -50,6 +50,14 @@ nav {
 		display: flex;
 		animation: menuComes 500ms ease-in-out forwards;
 	}
+
+	.menuContent{
+		cursor: auto;
+
+		a {
+			cursor: pointer;
+		}
+	}
 		.aWrapper {
 			position: relative;
 			width: 50%;
@@ -90,7 +98,6 @@ nav {
 #menuToggle.showMenu + .menuContent .aWrapper:hover {
 	.customBorder.fullBorder {
 		animation: underlineAnimation 800ms ease-in-out backwards;
-		width: 100% !important;
 		height: 100% !important;
 		}
 	}
@@ -119,8 +126,7 @@ nav {
 		justify-content: center;
 		gap: 3rem;
 		align-items: center;
-		// display: none;
-		transform: translateY(100vh);
+		transform: translateY(110vh);
 	}
 
 	.triangle {
@@ -179,10 +185,11 @@ nav {
 		.menuContent {
 			top: 90px;
 			height: calc(100vh - 90px);
+			width: 100%;
 		}
 
 		.aWrapper {
-			width: 90%;
+			width: 80%;
 			height: 10vh;
 
 			a {
