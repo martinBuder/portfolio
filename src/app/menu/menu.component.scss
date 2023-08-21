@@ -198,5 +198,15 @@ nav {
 		}
 	}
 
+	@media screen and (max-width: 360px) {
+
+		.aWrapper {
+			height: 3rem;
+		
+		a {
+			font-size: 1.5rem;
+		}}
+	}
+
 	
 	
