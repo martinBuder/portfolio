@@ -5,4 +5,5 @@ export interface Project {
 	description: string,
 	codeElements: string,
 	githubLink: string,
+	inDevelopment?: boolean,
 }

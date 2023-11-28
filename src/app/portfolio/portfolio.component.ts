@@ -31,5 +31,15 @@ export class PortfolioComponent {
       codeElements: 'JavaScript(OOP) | HTML | CSS',
       githubLink: 'https://github.com/martinBuder/SharpieGame',
     },
+    {
+      img: 'dabubble',
+      weblink: 'https://designyourstage.com/DABubble/',
+      title: 'DA Bubble',
+      description: 'A chat program that enables users to communicate through personal chats or group channels. Users can register using either email and password or through Google registration.',
+      codeElements: `Angular | TypeScript | HTML | SCSS |` + '\n' + `
+      Firebase Firestore Database & Authentication`,
+      githubLink: 'https://github.com/martinBuder/DA_Bubble',
+      inDevelopment: true,
+    },
   ] //img = 4/3
 }

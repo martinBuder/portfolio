@@ -51,12 +51,12 @@ export class ContactComponent {
    formdata.append('email', email.value);
    formdata.append('message', message.value);
 
-  //  await fetch('https://designyourstage.com/sendMail/send_mail.php',
-  //   {
-  //     method: 'POST',
-  //     body: formdata,
-  //   }
-  //  )
+   await fetch('https://designyourstage.com/sendMail/send_mail.php',
+    {
+      method: 'POST',
+      body: formdata,
+    }
+   )
 
    sendBtn.innerHTML = 'Thanks, your Message is sent!';
    setTimeout(() => {
