@@ -4,6 +4,7 @@
 		<h4>This page is a sample of my work - please feel free to try them out</h4>
 	</div>
 	<div class="projects">
-		<app-project *ngFor="let project of projects, let i = index" [project]="project" [i]="i" [projectsAmount]="projects.length" class="imgHover"></app-project>
+		<app-project *ngFor="let project of projects, let i = index" [project]="project" [i]="i" [projectsAmount]="projects.length" class="imgHover">
+		</app-project>
 	</div>
 </div>
